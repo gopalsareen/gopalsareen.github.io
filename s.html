@@ -2,25 +2,29 @@
 
 <html>
   <head>
+<script>
+// Ensure window.ps is defined as an empty object if it's not already defined
+window.ps = window.ps || {};
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize addMeta if it's not already defined
+    if (typeof window.ps.addMeta !== 'function') {
+        window.ps.addMeta = function(metaData) {
+            console.log('Initializing addMeta function...');
+            // Implementation of addMeta function logic goes here
+            // Example: console.log(metaData);
+        };
+    }
+
+    // Now call addMeta with UserType parameter
+    window.ps.addMeta({ UserType: 'Customer' });
+});
 
   </head>
   <body>
 
 
       <script src="https://cdn.popupsmart.com/bundle.js" data-id="872637" async defer></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Add a slight delay (e.g., 100 milliseconds) before calling addMeta
-    setTimeout(function() {
-        if (window.ps && typeof window.ps.addMeta === 'function') {
-            window.ps.addMeta({ UserType: 'Customer' });
-        } else {
-            console.error('window.ps or window.ps.addMeta is not defined or not a function.');
-        }
-    }, 100); // Adjust timing if necessary
-});
-</script>
 
   </body>
 
