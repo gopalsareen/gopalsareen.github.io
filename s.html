@@ -9,15 +9,14 @@
 
 
       <script src="https://cdn.popupsmart.com/bundle.js" data-id="872637" async defer></script>
-   <script>
-window.onload = function() {
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
     if (window.ps && typeof window.ps.addMeta === 'function') {
         window.ps.addMeta({ UserType: 'Customer' });
     } else {
-        console.error('window.ps.addMeta is not defined or not a function.');
+        console.error('window.ps or window.ps.addMeta is not defined or not a function.');
     }
-};
-
+});
 </script>
   </body>
 
