@@ -9,8 +9,10 @@
 
 
       <script src="https://cdn.popupsmart.com/bundle.js" data-id="872637" async defer></script>
-  <script>
+ <script>
 document.addEventListener('DOMContentLoaded', function() {
+    console.log(window.ps); // Check if window.ps is defined
+    console.log(window.ps.addMeta); // Check if addMeta function is defined
     if (window.ps && typeof window.ps.addMeta === 'function') {
         window.ps.addMeta({ UserType: 'Customer' });
     } else {
@@ -18,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+
   </body>
 
   
